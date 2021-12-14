@@ -56,6 +56,7 @@ def main():
             fileLines = f.readlines()
     except:
         print("Could not open the list file.")
+        exit(1)
 
     # Create comma seperated list of DeviceIDs.
     # To be used for input 'ids' to broker.delete().
