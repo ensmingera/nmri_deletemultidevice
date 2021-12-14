@@ -6,7 +6,7 @@ It is designed to run from the NetMRI sandbox, but you can run this script from 
 
 
 ### Prerequisites
-  - Python 3.5+
+  - Python 3
   - Infoblox NetMRI Python API client package (infoblox_netmri)
 
 ### Usage
