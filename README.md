@@ -27,7 +27,7 @@ nmri_deletemultidevice.py [-h] -l LIST [-n HOST] [-u USER] [--unitid UNITID]
   - UnitID of collector to send delete request to (used in OC environment).
 
 ### Creating a list of Device ID's
-The easiest method to create a list of Device ID's is to CSV export from the ```Network Explorer > Discovery page```.  
+The easiest method to create a list of Device ID's is to CSV export from the ```Network Explorer > Discovery``` page.  
 1. Create filters if necessary and then click on the button for ```CSV Export```.  
 2. After opening the CSV, copy the values from the ```DeviceID``` column to another file.  
 If the NetMRI is an Operations Center, take note of the value from the ```UnitID``` column. You will have to specify this number with the ```--unitid``` argument.
@@ -60,20 +60,20 @@ To avoid this, follow these steps:
 ./nmri_deletemultidevice.py -l list.txt
 ```
   
-**Running from Operations Center NetMRI sandbox:**  
+**Running from an NetMRI Operations Center sandbox:**  
 *Send deletion request for DeviceIDs from filename ```list.txt``` on UnitID (collector ID) ```5```*
 ```
 ./nmri_deletemultidevice.py -l list.txt --unitid 5
-```
-  
-**Running from an external machine to a NetMRI Operations Center:**  
-*Send deletion request for DeviceIDs from filename ```list.txt```, to an Operations Center at ```172.16.100.1```, as username ```aensminger```, specifying UnitID (collector ID) ```2```.*
-```
-./nmri_deletemultidevice.py -l list.txt -n 172.16.100.1 -u aensminger --unitid 2
 ```
   
 **Running from an external machine to a standalone NetMRI:**  
 *Send deletion request for DeviceIDs from filename ```list.txt```, to a standalone NetMRI at ```10.200.100.75```, as username ```aensminger```.*
 ```
 ./nmri_deletemultidevice.py -l list.txt -n 10.200.100.75 -u aensminger
+```
+  
+**Running from an external machine to a NetMRI Operations Center:**  
+*Send deletion request for DeviceIDs from filename ```list.txt```, to an Operations Center at ```172.16.100.1```, as username ```aensminger```, specifying UnitID (collector ID) ```2```.*
+```
+./nmri_deletemultidevice.py -l list.txt -n 172.16.100.1 -u aensminger --unitid 2
 ```
